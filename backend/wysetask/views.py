@@ -73,7 +73,7 @@ def registerUser(request):
         elif email == '' or password=='': 
             return JsonResponse({'error': 'Email and Password required'}, status=401)
         # Create a new user
-        new_user = User.objects.create_user(username=username,email=email, password=password,lastname=lastname,firstname=firstname)
+        new_user = User.objects.create_user(username=username,email=email, password=password,last_name=lastname,first_name=firstname)
 
         if new_user:
             return JsonResponse({'message': 'User registered successfully'}, status=201)

@@ -38,6 +38,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('getData/',include('wysetask.urls')),   
+    path('accounts/',include('wysetask.urls')),   
 ]
 

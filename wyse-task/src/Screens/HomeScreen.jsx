@@ -17,7 +17,7 @@ const HomeScreen=()=>{
                 const uid=user?.uid;
                 let token = await user.getIdToken();
                 tokenRef.current=token;
-                fetch(`http://127.0.0.1:8000/getData/${uid}`,{
+                fetch(`http://127.0.0.1:8000/accounts/profile/view/${uid}`,{
                     headers:{
                         "Authorization":`Bearer ${token}`
                     }
@@ -33,7 +33,7 @@ const HomeScreen=()=>{
     const update=async () =>{
         console.log("tokenwa",tokenRef.current)
         try {
-            const response = await fetch('http://127.0.0.1:8000/getData/update/', {
+            const response = await fetch('http://127.0.0.1:8000/accounts/profile/edit/', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

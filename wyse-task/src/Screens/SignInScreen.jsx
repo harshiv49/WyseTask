@@ -30,7 +30,7 @@ const SignInScreen = ()=>{
       // }
     
       try {
-        const response = await fetch('http://127.0.0.1:8000/getData/register/', {
+        const response = await fetch('http://127.0.0.1:8000/accounts/register/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -57,7 +57,7 @@ const SignInScreen = ()=>{
     
     const loginUser = async () => {
         try {
-          const response = await fetch('http://127.0.0.1:8000/getData/login/', {
+          const response = await fetch('http://127.0.0.1:8000/accounts/login/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -121,7 +121,6 @@ const SignInScreen = ()=>{
                         onChange={(e) => setLastName(e.target.value)}
                     />
                     <button onClick={registerUser}>Register</button>
-                    <br/>
                     <button onClick={login}>Already have an account? Login</button>
                     <p>{error}</p>
                 </div>
@@ -141,7 +140,7 @@ const SignInScreen = ()=>{
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <button onClick={loginUser}>Login</button>
-                    <p className="error">{error}</p>
+                    <p className="">{error}</p>
                 </div>
             )}
         </div>
