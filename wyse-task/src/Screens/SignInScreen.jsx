@@ -121,6 +121,7 @@ const SignInScreen = ()=>{
                         onChange={(e) => setLastName(e.target.value)}
                     />
                     <button onClick={registerUser}>Register</button>
+                    <br/>
                     <button onClick={login}>Already have an account? Login</button>
                     <p>{error}</p>
                 </div>

@@ -7,7 +7,7 @@ class User(AbstractUser):
     first_name=models.CharField(max_length=100,null=True,blank=True)
     last_name=models.CharField(max_length=100,null=True,blank=True)
     email=models.EmailField(unique=True,max_length=100)
-    mobile=models.CharField(max_length=14)
+    mobile=models.CharField(max_length=14,default=0000000000)
     is_verified=models.BooleanField(default=False)
     email_token=models.CharField(max_length=100,null=True,blank=True)
     forget_password=models.CharField(max_length=100,null=True,blank=True)
